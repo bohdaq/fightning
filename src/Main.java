@@ -15,16 +15,16 @@ public class Main {
         boolean endOfGame = false;
 
         while(!endOfGame){
-            System.out.println("Pers One Hits [0-4]:");
+            System.out.println("Pers One Hits [0-3]:");
             int persOneHits = scanner.nextInt();
 
-            System.out.println("Pers One Blocks [0-4]:");
+            System.out.println("Pers One Blocks [0-3]:");
             int persOneBlocks = scanner.nextInt();
 
-            System.out.println("Pers Two Hits [0-4]:");
+            System.out.println("Pers Two Hits [0-3]:");
             int persTwoHits = scanner.nextInt();
 
-            System.out.println("Pers Two Blocks [0-4]:");
+            System.out.println("Pers Two Blocks [0-3]:");
             int persTwoBlocks = scanner.nextInt();
 
             endOfGame = fp.fight(persOneHits, persOneBlocks, persTwoHits, persTwoBlocks);
