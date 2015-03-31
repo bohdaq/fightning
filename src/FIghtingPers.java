@@ -14,18 +14,21 @@ class FightingPers {
     }
 
     boolean fight(int persOneHits, int persOneBlocks, int persTwoHits, int persTwoBlocks){
-        if(persOne.getHp() > 0 && persTwo.getHp() > 0){
+
             if(persOneHits != persTwoBlocks){
                 persTwo.hitBy(persOne.getStrength());
             }
             if(persTwoHits != persOneBlocks){
                 persOne.hitBy(persTwo.getStrength());
             }
-            System.out.println("Next Round.\n" + "1 " + persOne + " 2 " + persTwo);
+            if(persOne.getHp() <= 0)
+
+        if(persOne.getHp() > 0 && persTwo.getHp() > 0){
+            System.out.println("Next Round.\n" + "1 " + persOne + "  2 " + persTwo);
 
             return false;
         } else {
-            System.out.println("Game Over.\n" + "1 " + persOne + "2 " + persTwo);
+            System.out.println("Game Over.\n" + "1 " + persOne + "  2 " + persTwo);
             return true;
         }
     }
