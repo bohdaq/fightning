@@ -8,3 +8,4 @@ What's up guys, i'd like to intriduce you what i've wrote
 Hi all Java developer. I think that all read it. Then for a meeting tomorrow.
 ( .) ( .) this is tits )))
 Second commit
+Hello friends!!!
