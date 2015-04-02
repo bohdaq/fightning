@@ -13,19 +13,29 @@ public class GreetingServer extends Thread {
     public void run() {
         while (true) {
             try {
+
+                //General information
                 outline("Waiting for client on port " +
                         serverSocket.getLocalPort() + "...");
                 Socket server = serverSocket.accept();
                 outline("Just connected to "
                         + server.getRemoteSocketAddress());
+
+                //From client
                 DataInputStream in =
                         new DataInputStream(server.getInputStream());
                 outline(in.readUTF());
+
+                //To client
                 DataOutputStream out =
                         new DataOutputStream(server.getOutputStream());
                 out.writeUTF("Thank you for connecting to "
                         + server.getLocalSocketAddress() + "\nGoodbye!");
+
+
 //                server.close();
+
+
             } catch (SocketTimeoutException s) {
                 outline("Socket timed out!");
                 break;

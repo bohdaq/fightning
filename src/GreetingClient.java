@@ -14,12 +14,17 @@ public class GreetingClient
             Socket client = new Socket(serverName, port);
             System.out.println("Just connected to "
                     + client.getRemoteSocketAddress());
+
+
+            //To server
             OutputStream outToServer = client.getOutputStream();
             DataOutputStream out =
                     new DataOutputStream(outToServer);
-
             out.writeUTF("Hello from "
                     + client.getLocalSocketAddress());
+
+
+            //From server
             InputStream inFromServer = client.getInputStream();
             DataInputStream in =
                     new DataInputStream(inFromServer);
