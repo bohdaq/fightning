@@ -60,4 +60,9 @@ public class Mouse {
         };
         mouse.mouseIsPaintingOnABoard(woodenBoard);
     }
+
+    @Override
+    public String toString() {
+        return "I'm a little Mouse";
+    }
 }
